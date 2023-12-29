@@ -106,7 +106,12 @@ main {
   0% { transform: scale(1); }
   100% { transform: scale(1); }
 }
-
+.weather-icon {
+  position: right;
+  padding: 5;
+  display: inline-block;
+  
+}
 footer {
   border-top: 1px solid #f9f7fe;
   text-align: center;
