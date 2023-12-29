@@ -26,7 +26,6 @@ function updateWeatherUI(data) {
   let temperatureValueElement = document.querySelector("#current-temperature-value");
   let temperatureUnitElement = document.querySelector("#current-temperature-unit");
   let weatherIconElement = document.querySelector("#weather-icon-i");
-  let animatedWeatherIconElement = document.querySelector("#animated-weather-icon"); // Added line
 
   if (!weatherIconElement) {
     console.error("Weather icon element not found");
@@ -64,10 +63,6 @@ function updateWeatherUI(data) {
   windSpeedElement.innerHTML = `Wind: <strong>${data.wind.speed.toFixed(1)} m/s</strong>`;
   weatherDescriptionElement.innerHTML = data.weather[0].description;
 
-  // Update animated weather icon
-  const animatedWeatherIconUrl = getAnimatedWeatherIconUrl(data.weather[0].icon);
-  animatedWeatherIconElement.src = animatedWeatherIconUrl;
-
   updateLocalTime();
 }
 
@@ -81,8 +76,9 @@ function displayCurrentDateTime() {
 }
 
 function updateLocalTime() {
-  // Add your code for updating local time if needed
+  
 }
+
 function showPosition(position) {
   const lat = position.coords.latitude;
   const lon = position.coords.longitude;
